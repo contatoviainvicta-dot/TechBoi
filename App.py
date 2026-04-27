@@ -104,7 +104,7 @@ with st.sidebar:
 
 # Route to pages
 if page == "🏠 Dashboard":
-    from pages import dashboard
+    from pages import Dashboard
     dashboard.show()
 elif page == "📦 Lotes":
     from pages import lotes
