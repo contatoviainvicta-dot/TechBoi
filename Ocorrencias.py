@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from datetime import date
-from utils.database import inserir_ocorrencia, listar_ocorrencias, listar_lotes, listar_animais, resolver_ocorrencia
+from core.database import inserir_ocorrencia, listar_ocorrencias, listar_lotes, listar_animais, resolver_ocorrencia
 
 TIPOS_OCORRENCIA = [
     "Doença Respiratória", "Doença Digestiva", "Lesão/Trauma",
@@ -124,7 +124,7 @@ def show():
                     inserir_ocorrencia(dados)
                     if status_oc == "Resolvida" and data_resolucao:
                         # update resolução after insert
-                        from utils.database import get_connection
+                        from core.database import get_connection
                         conn = get_connection()
                         c = conn.cursor()
                         c.execute("UPDATE ocorrencias SET data_resolucao=? WHERE id=(SELECT MAX(id) FROM ocorrencias)", (str(data_resolucao),))
