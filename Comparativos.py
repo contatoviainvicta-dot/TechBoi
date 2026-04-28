@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from utils.database import listar_lotes, calcular_gmd_lote, listar_pesagens, listar_ocorrencias
+from core.database import listar_lotes, calcular_gmd_lote, listar_pesagens, listar_ocorrencias
 
 def show():
     st.title("🔍 Comparativos entre Lotes")
