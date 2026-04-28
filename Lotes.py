@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 from datetime import date
-from utils.database import inserir_lote, listar_lotes, atualizar_lote, inserir_animal, listar_animais
+from core.database import inserir_lote, listar_lotes, atualizar_lote, inserir_animal, listar_animais
 
 RACAS = ["Nelore", "Angus", "Brahman", "Simmental", "Hereford", "Brangus", "Gir", "Guzerá", "Tabapuã", "Cruzado", "Outra"]
 CATEGORIAS = ["Bezerro", "Garrote", "Novilho", "Boi", "Vaca", "Novilha", "Touro"]
