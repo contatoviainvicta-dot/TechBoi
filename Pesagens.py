@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import date
-from utils.database import inserir_pesagem, listar_pesagens, listar_lotes, listar_animais
+from core.database import inserir_pesagem, listar_pesagens, listar_lotes, listar_animais
 
 def show():
     st.title("⚖️ Controle de Pesagens")
