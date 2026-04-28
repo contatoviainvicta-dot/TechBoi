@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from utils.database import (listar_lotes, listar_animais, listar_pesagens,
+from core.database import (listar_lotes, listar_animais, listar_pesagens,
                              calcular_gmd, calcular_gmd_lote)
 
 def show():
