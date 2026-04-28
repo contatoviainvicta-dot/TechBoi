@@ -1,3 +1,9 @@
+import sys
+import os
+
+# Garante que o diretório raiz está no path para imports funcionarem no Streamlit Cloud
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 import streamlit as st
 
 st.set_page_config(
@@ -104,20 +110,20 @@ with st.sidebar:
 
 # Route to pages
 if page == "🏠 Dashboard":
-    from pages import Dashboard
+    from modulos import dashboard
     dashboard.show()
 elif page == "📦 Lotes":
-    from pages import lotes
+    from modulos import lotes
     lotes.show()
 elif page == "⚖️ Pesagens":
-    from pages import pesagens
+    from modulos import pesagens
     pesagens.show()
 elif page == "🏥 Ocorrências":
-    from pages import ocorrencias
+    from modulos import ocorrencias
     ocorrencias.show()
 elif page == "📊 Análises & GMD":
-    from pages import analises
+    from modulos import analises
     analises.show()
 elif page == "🔍 Comparativos":
-    from pages import comparativos
+    from modulos import comparativos
     comparativos.show()
